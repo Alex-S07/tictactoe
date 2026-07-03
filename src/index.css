@@ -1,0 +1,121 @@
+/* ============================================
+   NEON ARENA - TIC TAC TOE (React)
+   Cyberpunk aesthetic: Black + Neon Green + Neon Red
+   ============================================ */
+
+:root {
+  --black:           #000000;
+  --black-deep:      #050505;
+  --black-card:      #0a0a0a;
+  --black-border:    #1a1a1a;
+  --neon-green:      #39ff14;
+  --neon-green-glow: 0 0 8px #39ff14, 0 0 20px #39ff14aa, 0 0 40px #39ff1455;
+  --neon-red:        #ff1744;
+  --neon-red-glow:   0 0 8px #ff1744, 0 0 20px #ff1744aa, 0 0 40px #ff174455;
+  --neon-white:      #e0e0e0;
+  --neon-gray:       #555;
+  --font-title:      'Orbitron', sans-serif;
+  --font-body:       'Rajdhani', sans-serif;
+  --radius:          6px;
+  --transition:      0.2s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--black-deep);
+  color: var(--neon-white);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* ── Background effects ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(57,255,20,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57,255,20,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.15) 2px,
+    rgba(0,0,0,0.15) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+#root {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ── Animations ── */
+@keyframes pop-in {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+@keyframes pulse-green {
+  0%,100% { text-shadow: 0 0 8px #39ff14, 0 0 20px #39ff14aa, 0 0 40px #39ff1455; }
+  50%     { text-shadow: 0 0 4px #39ff14, 0 0 10px #39ff1466; }
+}
+
+@keyframes pulse-red {
+  0%,100% { text-shadow: 0 0 8px #ff1744, 0 0 20px #ff1744aa, 0 0 40px #ff174455; }
+  50%     { text-shadow: 0 0 4px #ff1744, 0 0 10px #ff174466; }
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%     { opacity: 0; }
+}
+
+@keyframes win-pulse-x {
+  from { box-shadow: 0 0 10px #39ff1444, inset 0 0 16px #39ff1415; }
+  to   { box-shadow: 0 0 28px #39ff1488, inset 0 0 32px #39ff1430; }
+}
+
+@keyframes win-pulse-o {
+  from { box-shadow: 0 0 10px #ff174444, inset 0 0 16px #ff174415; }
+  to   { box-shadow: 0 0 28px #ff174488, inset 0 0 32px #ff174430; }
+}
+
+@keyframes overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes box-in {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}

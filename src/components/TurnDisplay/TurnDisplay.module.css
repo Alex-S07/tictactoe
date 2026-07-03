@@ -1,0 +1,25 @@
+.turnDisplay {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-title);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--neon-gray);
+}
+
+.player {
+  font-size: 1.1rem;
+  font-weight: 900;
+  transition: color var(--transition), text-shadow var(--transition);
+}
+
+.playerX {
+  color: var(--neon-green);
+  text-shadow: var(--neon-green-glow);
+}
+
+.playerO {
+  color: var(--neon-red);
+  text-shadow: var(--neon-red-glow);
+}

@@ -1,0 +1,38 @@
+.header {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  user-select: none;
+}
+
+.titleX {
+  color: var(--neon-green);
+  text-shadow: var(--neon-green-glow);
+  animation: pulse-green 3s ease-in-out infinite;
+}
+
+.titleO {
+  color: var(--neon-red);
+  text-shadow: var(--neon-red-glow);
+  animation: pulse-red 3s ease-in-out infinite;
+}
+
+.titleMain {
+  color: var(--neon-white);
+}
+
+.subtitle {
+  font-family: var(--font-title);
+  font-size: 0.72rem;
+  letter-spacing: 0.5em;
+  color: var(--neon-gray);
+  margin-top: 6px;
+}

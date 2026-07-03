@@ -8,81 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bg-grid"></div>
-    <div class="scanlines"></div>
-
-    <div class="container">
-      <!-- Header -->
-      <header class="header">
-        <h1 class="title">
-          <span class="title-x">X</span>
-          <span class="title-main">TIC TAC TOE</span>
-          <span class="title-o">O</span>
-        </h1>
-        <p class="subtitle">NEON ARENA</p>
-      </header>
-
-      <!-- Score Board -->
-      <div class="scoreboard">
-        <div class="score-card score-x" id="score-x-card">
-          <div class="score-player-label">PLAYER X</div>
-          <div class="score-value" id="score-x">0</div>
-          <div class="score-indicator" id="indicator-x"></div>
-        </div>
-        <div class="score-draws">
-          <div class="score-player-label">DRAWS</div>
-          <div class="score-value score-draw-value" id="score-draws">0</div>
-        </div>
-        <div class="score-card score-o" id="score-o-card">
-          <div class="score-player-label">PLAYER O</div>
-          <div class="score-value" id="score-o">0</div>
-          <div class="score-indicator" id="indicator-o"></div>
-        </div>
-      </div>
-
-      <!-- Turn Indicator -->
-      <div class="turn-display" id="turn-display">
-        <span class="turn-label">CURRENT TURN:</span>
-        <span class="turn-player" id="turn-player">X</span>
-      </div>
-
-      <!-- Game Board -->
-      <div class="board-wrapper">
-        <div class="board" id="board" role="grid" aria-label="Tic Tac Toe board">
-          <button class="cell" id="cell-0" data-index="0" aria-label="Cell 1" role="gridcell"></button>
-          <button class="cell" id="cell-1" data-index="1" aria-label="Cell 2" role="gridcell"></button>
-          <button class="cell" id="cell-2" data-index="2" aria-label="Cell 3" role="gridcell"></button>
-          <button class="cell" id="cell-3" data-index="3" aria-label="Cell 4" role="gridcell"></button>
-          <button class="cell" id="cell-4" data-index="4" aria-label="Cell 5" role="gridcell"></button>
-          <button class="cell" id="cell-5" data-index="5" aria-label="Cell 6" role="gridcell"></button>
-          <button class="cell" id="cell-6" data-index="6" aria-label="Cell 7" role="gridcell"></button>
-          <button class="cell" id="cell-7" data-index="7" aria-label="Cell 8" role="gridcell"></button>
-          <button class="cell" id="cell-8" data-index="8" aria-label="Cell 9" role="gridcell"></button>
-        </div>
-      </div>
-
-      <!-- Result Overlay -->
-      <div class="result-overlay" id="result-overlay" aria-live="polite">
-        <div class="result-box">
-          <div class="result-icon" id="result-icon"></div>
-          <div class="result-message" id="result-message">PLAYER X WINS!</div>
-          <div class="result-sub" id="result-sub">The arena falls silent...</div>
-          <div class="result-actions">
-            <button class="btn btn-primary" id="btn-next-round">NEXT ROUND</button>
-            <button class="btn btn-secondary" id="btn-reset-scores">RESET ALL</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <div class="controls">
-        <button class="btn btn-outline" id="btn-new-game">NEW GAME</button>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
